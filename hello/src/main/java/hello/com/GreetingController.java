@@ -33,4 +33,7 @@ public class GreetingController {
     public ResponseEntity<String> getMessage() {
         return ResponseEntity.ok(g.getMessage());
     }
+    
+    // add additional method
+    
 }
