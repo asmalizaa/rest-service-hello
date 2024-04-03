@@ -35,5 +35,8 @@ public class GreetingController {
     }
     
     // add additional method
-    
+    @GetMapping("/greetUser")
+    public Greeting greetUser(@RequestParam(value = "name", defaultValue = "World") String name) {
+    	return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    }
 }
